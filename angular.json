@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularBoilerPlate": {
+    "boilerplate": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularBoilerPlate",
+            "outputPath": "dist/boilerplate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularBoilerPlate:build"
+            "browserTarget": "boilerplate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularBoilerPlate:build:production"
+              "browserTarget": "boilerplate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularBoilerPlate:build"
+            "browserTarget": "boilerplate:build"
           }
         },
         "test": {
@@ -114,19 +114,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularBoilerPlate:serve"
+            "devServerTarget": "boilerplate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularBoilerPlate:serve:production"
+              "devServerTarget": "boilerplate:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "AngularBoilerPlate",
+  "defaultProject": "boilerplate",
   "cli": {
-    "analytics": "ef1f55c5-333d-4379-864d-78e7cf1eb2ef"
+    "analytics": false
   }
 }
